@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTIFICATIONS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--ALERT SUCCESS-->
+    <div class="alert hide success" id="alertSuccess">
+        <div class="text-icon ">
+            <span class="icon"><i class="fas fa-check-circle"></i></span>
+            <h6 class="text">I'm a success alert.</h6>
+        </div>
+        <span class="icon-close">
+            <i class="fas fa-times-circle" id="closeS"></i>
+        </span>
+    </div>
+    <!--ALERT SUCCESS-->
+    <div class="alert hide info" id="alertInfo">
+        <div class="text-icon ">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <h6 class="text">I'm a success alert.</h6>
+        </div>
+        <span class="icon-close">
+            <i class="fa fa-times-circle" id="closeI"></i>
+        </span>
+    </div>
+    <!--ALERT SUCCESS-->
+    <div class="alert hide warning" id="alertWarning">
+        <div class="text-icon ">
+            <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+            <h6 class="text">I'm a success alert.</h6>
+        </div>
+        <span class="icon-close">
+            <i class="fas fa-times-circle" id="closeW"></i>
+        </span>
+    </div>
+    <!--ALERT SUCCESS-->
+    <div class="alert hide error" id="alertError">
+        <div class="text-icon ">
+            <span class="icon"><i class="fas fa-exclamation-circle"></i></span>
+            <h6 class="text">I'm a success alert.</h6>
+        </div>
+        <span class="icon-close">
+            <i class="fas fa-times-circle" id="closeE"></i>
+        </span>
+    </div>
+
+    <div class="container">
+        <div class="btn-group">
+            <button id="success" class="btn success">SUCCESS</button>
+            <button id="info" class="btn info">INFO</button>
+            <button id="warning" class="btn warning">WARNING</button>
+            <button id="error" class="btn error">ERROR</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

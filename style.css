@@ -1,0 +1,232 @@
+:root {
+    --success: #4caf50;
+    --info: #2196f3;
+    --warning: #fb8c00;
+    --error: #ff5252;
+    --white: #ffffff;
+    --box-shadow: 0 1px 5px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fdfbfb;
+    background: -moz-linear-gradient(-121deg, #fdfbfb 0%, #eaedee 100%);
+    background: -webkit-linear-gradient(-121deg, #fdfbfb 0%, #eaedee 100%);
+    background: linear-gradient(-121deg, #fdfbfb 0%, #eaedee 100%);
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/******************************/
+/**** ESTILO DE LOS ALERRTS****/
+/******************************/
+.alert {
+    padding: 10px 20px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    color: white;
+    z-index: 999;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.alert.success {
+    background-color: var(--success);
+}
+
+.alert.info {
+    background-color: var(--info);
+    top: 85px;
+}
+
+.alert.warning {
+    background-color: var(--warning);
+    top: 140px;
+}
+
+.alert.error {
+    background-color: var(--error);
+    top: 195px;
+}
+
+.alert .text-icon {
+    display: flex;
+    align-items: center;
+}
+
+.alert .text-icon .icon {
+    font-size: 20px;
+}
+
+.alert .text-icon .text {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.alert .icon-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s ease;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.alert .icon-close .fas {
+    font-size: 20px;
+}
+
+.alert .icon-close:hover {
+    background-color: rgba(255, 225, 255, .2);
+    transition: all .5s ease;
+}
+
+/**********************************/
+/**** ANIMACIONES DE LOS ALERTS****/
+/**********************************/
+.alert.showAlert {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.alert.show {
+    animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    40% {
+        transform: translateX(-15%);
+    }
+
+    80% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-15px);
+    }
+}
+
+.alert.hide {
+    animation: hide_slide 1s ease forwards;
+}
+
+@keyframes hide_slide {
+    0% {
+        transform: translateX(-15px);
+    }
+
+    40% {
+        transform: translateX(0%);
+    }
+
+    80% {
+        transform: translateX(-15%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+/***********************************/
+/**** CONTAINER DE  LOS BOTONES ****/
+/***********************************/
+.container {
+    margin-top: 300px;
+}
+
+.container .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .btn-group .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    color: white;
+    font-weight: 540;
+    cursor: pointer;
+    transition: all .1s linear;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .btn-group .btn:hover {
+    opacity: 0.8;
+    transition: all .3s linear;
+}
+
+.container .btn-group .btn.success {
+    background-color: var(--success);
+}
+
+.container .btn-group .btn.info {
+    background-color: var(--info);
+}
+
+.container .btn-group .btn.warning {
+    background-color: var(--warning);
+}
+
+.container .btn-group .btn.error {
+    background-color: var(--error);
+}
+
+/*************************************/
+/**** EFECTO WAVES DE LOS BOTONES ****/
+/*************************************/
+.btn span {
+    position: absolute;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ripples 0.6s linear infinite;
+}
+
+@keyframes ripples {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
